@@ -4,7 +4,9 @@ import 'package:yh_todoapp/providers/todo_provider.dart';
 import 'package:yh_todoapp/screens/home_screen.dart';
 
 void main() {
-  ChangeNotifierProvider(create: (context) => TodoProvider(), child: MyApp());
+  runApp(
+    ChangeNotifierProvider(create: (context) => TodoProvider(), child: MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
       ),
       home: const HomeScreen(),
     );
